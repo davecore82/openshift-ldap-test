@@ -32,7 +32,7 @@ echo ""
 
 # Test LDAP connectivity
 echo "=== Testing LDAP Connectivity ==="
-oc run ldap-test --rm -it --image=centos:stream9 --restart=Never -- bash -c "
+oc run ldap-test --rm -it --image=registry.access.redhat.com/ubi9/ubi:latest --restart=Never -- bash -c "
 dnf install -y openldap-clients -q -y && \
 LDAPTLS_REQCERT=never ldapsearch -x -H $LDAP_HOST \
   -D '$BIND_DN' -w '$BIND_PASSWORD' \
