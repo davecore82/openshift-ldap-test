@@ -56,5 +56,5 @@ The script:
 - Uses `oc get oauth cluster` to extract LDAP settings
 - Parses the LDAP URL to separate host, base DN, and search attributes
 - Retrieves the bind password from the Kubernetes secret
-- Runs `ldapsearch` in a temporary CentOS pod
+- Runs `ldapsearch` in a temporary ubi9 pod
 - Uses `LDAPTLS_REQCERT=never` for self-signed certificates
